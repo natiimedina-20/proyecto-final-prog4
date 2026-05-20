@@ -9,14 +9,14 @@ export interface IItem extends Document {
 }
 
 
-const rolSchema = new Schema<IItem>(
+const itemSchema = new Schema<IItem>(
   {
     nombre: { 
       type: String,
-      required: [true, 'El nombre del rol es obligatorio'],
+      required: [true, 'El nombre del item es obligatorio'],
       unique: true,
       trim: true,
-      minlength: [3, 'El nombre del rol debe tener al menos 3 caracteres']
+      minlength: [3, 'El nombre del item debe tener al menos 3 caracteres']
     },
     precioUnitario: { 
       type: Number,
